@@ -1,8 +1,6 @@
 import cv2
 import numpy as np
-import os
 import nibabel as nib
-import sys
 import argparse
 
 img = None
@@ -38,7 +36,8 @@ def display(img_path, img_path2, lab_path, lab_path2):
     colormap = cv2.COLORMAP_BONE
     cv2.createTrackbar(trackbar_name, title_window , 0, alpha_slider_max, on_trackbar_bin)
     on_trackbar_bin(0)
-
+    print("Press any key to close the window...")
+    
     # Wait until user press some key
     cv2.waitKey()
     cv2.destroyAllWindows()
